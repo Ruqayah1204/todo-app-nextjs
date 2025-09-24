@@ -29,6 +29,9 @@ export async function POST(req: Request) {
     return Response.json({ text: result.text });
   } catch (error) {
     console.error('AI Agent error:', error);
-    return Response.json({ error: 'Error processing request', details: error.message }, { status: 500 });
+    return Response.json({ 
+      error: 'Error processing request', 
+      details: error instanceof Error ? error.message : 'Unknown error' 
+    }, { status: 500 });
   }
 }

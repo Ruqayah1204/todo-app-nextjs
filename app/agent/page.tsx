@@ -68,7 +68,7 @@ export default function ChatPage() {
       
       <div className="border rounded-lg p-4 h-96 overflow-y-auto mb-4 bg-gray-50">
         {messages.length === 0 ? (
-          <p className="text-gray-500 text-center">👋 Hi! I'm your AI task assistant. Ask me anything about organizing your tasks!</p>
+<p className="text-gray-500 text-center">👋 Hi! I&apos;m your AI task assistant. Ask me anything about organizing your tasks!</p>
         ) : (
           <div className="space-y-3">
             {messages.map((m, i) => (
@@ -110,7 +110,7 @@ export default function ChatPage() {
       </div>
       
       <div className="mt-4">
-        <p className="text-sm text-gray-600">Try asking: "Suggest 5 morning routine tasks" or "Help me plan my workday"</p>
+<p className="text-sm text-gray-600">Try asking: &quot;Suggest 5 morning routine tasks&quot; or &quot;Help me plan my workday&quot;</p>
       </div>
     </div>
   );

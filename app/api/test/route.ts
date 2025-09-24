@@ -17,7 +17,7 @@ export async function POST(req: Request) {
   } catch (error) {
     return Response.json({ 
       error: 'Failed to parse JSON',
-      details: error.message 
+      details: error instanceof Error ? error.message : 'Unknown error' 
     }, { status: 400 });
   }
 }

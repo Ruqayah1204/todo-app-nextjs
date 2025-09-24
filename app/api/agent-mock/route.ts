@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     console.error('Mock AI Agent error:', error);
     return Response.json({ 
       error: 'Error processing request', 
-      details: error.message 
+      details: error instanceof Error ? error.message : 'Unknown error' 
     }, { status: 500 });
   }
 }
