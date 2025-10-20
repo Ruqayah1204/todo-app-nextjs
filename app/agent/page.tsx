@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -18,7 +19,7 @@ export default function ChatPage() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/agent-mock", {
+      const res = await fetch("/api/agent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
